@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#101216"><meta name="description" content="EVOLVE — acompanhamento pessoal de musculação e evolução física."><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png"><title>EVOLVE — Fitness & Performance</title>
+<style>
+:root{--bg:#101216;--panel:#1b1f26;--panel2:#252b34;--muted:#9aa3af;--text:#f4f6f8;--lime:#b8f34a;--line:#303741;--red:#ff7777}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:88px}.app{max-width:560px;margin:auto;min-height:100vh}.top{padding:20px 18px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px}.top-left{display:flex;align-items:center;gap:12px}.logo{width:42px;height:42px;background:var(--lime);color:#111;border-radius:13px;display:grid;place-items:center;font-size:22px;font-weight:900}.brand{font-weight:900;letter-spacing:2px;font-size:20px}.sub{font-size:10px;color:var(--lime);letter-spacing:1.8px;font-weight:700}.userbadge{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:11px;padding:7px 10px;font-size:11px;font-weight:700;cursor:pointer;max-width:165px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.userbadge span{color:var(--lime)}.content{padding:0 15px 24px}.eyebrow{color:var(--lime);font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.hero{padding:20px;border:1px solid #343b45;border-radius:22px;background:linear-gradient(140deg,#252c35,#171a20);margin-bottom:14px}.hero h1{font-size:28px;line-height:1.1;margin:9px 0}.muted{color:var(--muted)}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:15px}.label{font-size:12px;color:var(--muted)}.value{font-size:24px;font-weight:800;margin-top:5px}.lime{color:var(--lime)}.section{display:flex;justify-content:space-between;align-items:center;margin:21px 2px 10px;gap:10px}.section h2{font-size:17px;margin:0}.btn{border:0;background:var(--lime);color:#111;font-weight:850;border-radius:12px;padding:12px 15px;cursor:pointer}.btn:disabled{opacity:.4}.btn.secondary{background:#303741;color:var(--text)}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}.wide{width:100%;margin-top:12px}.workout{display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer}.workout h3{margin:0 0 5px;font-size:16px}.pill{font-size:10px;color:var(--lime);background:#303c24;padding:5px 9px;border-radius:20px;white-space:nowrap}.pill.restpill{color:#dce4ee;background:#303741}.nav{position:fixed;bottom:0;left:0;right:0;background:#171a20;border-top:1px solid var(--line);display:flex;justify-content:center;padding:8px 5px calc(8px + env(safe-area-inset-bottom));z-index:5}.navinner{width:min(560px,100%);display:grid;grid-template-columns:repeat(5,1fr)}.nav button{background:none;border:0;color:var(--muted);font-size:10px;padding:6px;cursor:pointer}.nav button b{display:block;font-size:17px;margin-bottom:3px}.nav button.active{color:var(--lime)}.page{display:none}.page.active{display:block}.daygrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px 0}.daybtn{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:10px;padding:10px 3px;font-weight:800;font-size:11px;cursor:pointer}.daybtn.active{background:#303c24;color:var(--lime);border-color:#657d38}.daybtn.restday-tab{border-style:dashed;color:#cfd6e0}.daycontrols{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 10px}.resttoggle{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:8px 11px;font-size:12px;color:var(--text);cursor:pointer;user-select:none}.resttoggle input{accent-color:var(--lime);width:16px;height:16px;cursor:pointer}.exercise{padding:14px 0;border-bottom:1px solid var(--line)}.exercise:last-child{border:0}.exercisehead{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.exercise h3{font-size:14px;margin:0 0 4px}.muscles{font-size:11px;color:var(--muted)}.exrest-badge{display:inline-flex;align-items:center;gap:5px;margin-top:5px;background:#252b34;border:1px solid var(--line);border-radius:8px;padding:4px 8px;font-size:11px;color:var(--lime);font-weight:700}.exright{display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:flex-end}.mini{border:1px solid var(--line);background:#252b34;color:var(--text);border-radius:8px;padding:5px 8px;font-size:10px;font-weight:700;cursor:pointer}.mini.active-demo{border-color:#657d38;background:#303c24;color:var(--lime)}.mini.dangerbtn{border-color:#6b383e;background:#3a2125;color:#ffdadd}.exdemo{background:#252b34;border:1px solid #3d4754;border-radius:12px;padding:11px;margin-top:10px}.exdemo h4{margin:8px 0 4px;font-size:12px;color:var(--lime)}.exdemo h4:first-child{margin-top:0}.exdemo p,.exdemo li{font-size:12px;line-height:1.5;color:#d5dbe3}.exdemo ol{padding-left:18px;margin:4px 0 8px}.exedit{background:#252b34;border:1px solid #3d4754;border-radius:12px;padding:11px;margin-top:10px}.exedit .field{margin:7px 0}.exedit .field input,.exedit .field select{padding:9px 10px;font-size:13px}.exedit-actions{display:flex;gap:7px;margin-top:9px}.exedit-actions button{flex:1;padding:9px 10px;font-size:12px}.addbox{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}.planfooter{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.planfooter button{flex:1;min-width:120px;font-size:11px;padding:10px 8px}.sets{display:grid;grid-template-columns:28px 1fr 1fr 38px;gap:7px;align-items:center;margin-top:9px;color:var(--muted);font-size:10px}.sets input{width:100%;min-width:0;background:#11151a;border:1px solid var(--line);border-radius:8px;padding:9px 5px;color:white;font-size:14px;text-align:center}.check{accent-color:var(--lime);width:19px;height:19px}.field{display:block;margin:12px 0;color:var(--muted);font-size:12px}.field input,.field select{display:block;width:100%;margin-top:6px;background:#11151a;color:white;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:15px}.small{font-size:11px;color:var(--muted)}.timer{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#252b34;border:1px solid #39424d;border-radius:14px;padding:12px;margin:12px 0}.timer-sub{font-size:11px;color:var(--lime);margin-top:2px;font-weight:700}.timer strong{font-size:25px;font-variant-numeric:tabular-nums}.timerbtns{display:flex;gap:6px}.timerbtns button{padding:9px 11px}.setprompt{background:#222832;border:1px solid #657d38;border-radius:14px;padding:12px;margin:10px 0;display:none}.setprompt.active{display:block}.setprompt-title{font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px}.setprompt-sub{font-size:11px;color:var(--muted);margin-bottom:10px}.setprompt-actions{display:flex;gap:8px}.setprompt-actions button{flex:1;padding:9px 10px;font-size:12px}.historyitem{padding:12px 0;border-bottom:1px solid var(--line)}.historyitem:last-child{border:0}.empty{padding:22px;text-align:center;color:var(--muted)}.restday{padding:22px 14px;text-align:center;color:var(--muted);background:#171b22;border:1px dashed #3a4350;border-radius:13px;margin:8px 0}.restday b{display:block;color:var(--text);font-size:14px;margin-bottom:5px}.toast{position:fixed;bottom:85px;left:50%;transform:translateX(-50%);background:var(--lime);color:#111;padding:10px 16px;border-radius:12px;font-weight:800;display:none;z-index:8;max-width:90%;text-align:center}.hint{background:#252b34;border-radius:10px;padding:10px;color:var(--muted);font-size:11px;line-height:1.5}.tag{font-size:10px;color:#dce4ee;background:#303741;padding:4px 7px;border-radius:7px}.profileswitch{display:flex;gap:8px;align-items:center;margin:10px 0}.profileswitch select{flex:1;background:#11151a;color:white;border:1px solid var(--line);border-radius:10px;padding:11px;font-size:14px}.profileswitch button{padding:11px 12px;font-size:12px}.draftbanner{display:none;align-items:center;justify-content:space-between;gap:8px;background:#242d1d;border:1px solid #657d38;border-radius:12px;padding:9px 12px;margin:10px 0;font-size:11px;color:#e5f5c6}.draftbanner.active{display:flex}.draftbanner button{padding:5px 9px;font-size:10px}
+
+/* Catálogo da API e Seletor de GIFs */
+.librarytools{display:grid;grid-template-columns:1fr;gap:9px;margin:12px 0}.searchrow{display:flex;gap:7px}.searchbox,.filterbox{width:100%;background:#11151a;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font-size:14px}.searchrow .searchbox{flex:1;min-width:0}.searchrow button{padding:0 14px;font-size:12px;border-radius:11px;white-space:nowrap}.catbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 12px}.catbar-actions{display:flex;gap:6px;flex-wrap:wrap}.catbar-actions button{padding:7px 10px;font-size:11px}.librarygrid{display:grid;gap:10px}.libitem{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:12px}.libtop{display:flex;gap:11px;align-items:center}.libthumb{width:76px;height:76px;flex:0 0 76px;border-radius:12px;background:#101318;border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}.libthumb img{width:100%;height:100%;object-fit:contain;display:block}.libitem h3{margin:0 0 4px;font-size:14px;text-transform:capitalize}.libmeta{font-size:11px;color:var(--muted);line-height:1.4}.libactions{display:flex;gap:7px;margin-top:10px;flex-wrap:wrap}.libactions button{flex:1;min-width:110px;font-size:11px;padding:9px 8px}.libdetails{border-top:1px solid var(--line);margin-top:11px;padding-top:10px;display:none}.libitem.open .libdetails{display:block}.libdetails h4{margin:8px 0 4px;font-size:12px;color:var(--lime)}.libdetails p,.libdetails li{font-size:12px;line-height:1.5;color:#d5dbe3}.libdetails ol{padding-left:18px;margin:4px 0 8px}.musclechip{display:inline-block;background:#303741;border-radius:7px;padding:4px 7px;color:#dce4ee;font-size:10px;margin:5px 4px 0 0;text-transform:capitalize}.pinnedbadge{display:inline-block;background:#303c24;color:var(--lime);border:1px solid #657d38;border-radius:6px;padding:2px 6px;font-size:9px;font-weight:800;margin-left:5px;vertical-align:middle}.libmedia{margin-top:10px;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#11151a}.libmedia img{display:block;width:100%;max-height:260px;object-fit:contain;background:#11151a}.libmedia-caption{padding:8px 10px;font-size:10px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.libmedia-nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.libmedia-nav button{border:1px solid var(--line);background:#252b34;color:var(--text);border-radius:6px;padding:4px 7px;font-size:10px;font-weight:700;cursor:pointer}.libmedia-nav button.pinbtn{border-color:#657d38;background:#303c24;color:var(--lime)}.gifpicker{border-top:1px solid var(--line);background:#161a20;padding:10px}.gifpicker-bar{display:flex;gap:6px}.gifpicker-bar input{flex:1;min-width:0;background:#0f1217;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px}.gifpicker-bar button{border:0;background:var(--lime);color:#111;font-weight:800;border-radius:8px;padding:8px 11px;font-size:11px;cursor:pointer;white-space:nowrap}.gifpicker-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:9px;max-height:320px;overflow-y:auto}.gifchoice{background:#1e232b;border:1px solid var(--line);border-radius:10px;padding:7px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;cursor:pointer;text-align:left;color:var(--text)}.gifchoice:hover{border-color:var(--lime)}.gifchoice img{width:100%;height:110px;object-fit:contain;background:#0f1217;border-radius:6px}.gifchoice span{font-size:10px;line-height:1.3;color:#d5dbe3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.gifchoice b{font-size:10px;color:var(--lime);text-align:center;background:#2a3322;padding:4px;border-radius:6px}.libmedia-state{padding:16px 12px;text-align:center;color:var(--muted);font-size:12px}.libmedia-state button{margin-top:8px}.emptysearch{padding:20px;text-align:center;color:var(--muted);font-size:13px}
+.weightlog{display:grid;gap:7px;margin-top:10px}.weightrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}.profileactions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.profileactions button{font-size:11px}.danger{background:#512d32!important;color:#ffdadd!important}.field input[type=file]{padding:9px}.exercise input:focus,.field input:focus,.field select:focus,.searchbox:focus,.filterbox:focus,.gifpicker-bar input:focus{outline:2px solid var(--lime);outline-offset:1px}button:focus-visible{outline:2px solid var(--lime);outline-offset:2px}.installnote{margin-top:12px}</style></head>
+<body><div class="app">
+<header class="top"><div class="top-left"><div class="logo">E</div><div><div class="brand">EVOLVE</div><div class="sub">FITNESS & PERFORMANCE</div></div></div><button class="userbadge" onclick="showPage('profile',document.querySelector('[data-page=profile]'))" title="Trocar ou configurar atleta">Atleta: <span id="headerUserName">Atleta 1</span></button></header>
+<main class="content">
+<section id="home" class="page active"><div class="hero"><div class="eyebrow">FICHA LIVRE • CATÁLOGO DA API</div><h1>Monte sua ficha<br><span class="lime">do seu jeito.</span></h1><p class="muted">Adicione seus exercícios em português, escolha os GIFs e ajuste o descanso de cada exercício.</p><button class="btn wide" onclick="startWorkout('segunda')">INICIAR TREINO</button></div>
+<div class="stats"><div class="card"><div class="label">Treinos registrados</div><div class="value" id="totalWorkouts">0</div></div><div class="card"><div class="label">Peso atual</div><div class="value"><span id="homeWeight">—</span><small id="homeWeightUnit"></small></div></div></div>
+<div class="section"><h2>Dias da semana</h2><span class="pill">FICHA EM BRANCO</span></div>
+<div class="card workout" onclick="startWorkout('segunda')"><div><h3>Segunda-feira</h3><div class="small" id="homeSub_segunda">Sem exercícios ainda (toque para adicionar)</div></div><span class="pill restpill" id="homePill_segunda">VAZIO</span></div>
+<div class="card workout" style="margin-top:9px" onclick="startWorkout('terca')"><div><h3>Terça-feira</h3><div class="small" id="homeSub_terca">Sem exercícios ainda (toque para adicionar)</div></div><span class="pill restpill" id="homePill_terca">VAZIO</span></div>
+<div class="card workout" style="margin-top:9px" onclick="startWorkout('quarta')"><div><h3>Quarta-feira</h3><div class="small" id="homeSub_quarta">Sem exercícios ainda (toque para adicionar)</div></div><span class="pill restpill" id="homePill_quarta">VAZIO</span></div>
+<div class="card workout" style="margin-top:9px" onclick="startWorkout('quinta')"><div><h3>Quinta-feira</h3><div class="small" id="homeSub_quinta">Sem exercícios ainda (toque para adicionar)</div></div><span class="pill restpill" id="homePill_quinta">VAZIO</span></div>
+<div class="card workout" style="margin-top:9px" onclick="startWorkout('sexta')"><div><h3>Sexta-feira</h3><div class="small" id="homeSub_sexta">Sem exercícios ainda (toque para adicionar)</div></div><span class="pill restpill" id="homePill_sexta">VAZIO</span></div>
+</section>
+
+<section id="training" class="page"><div class="eyebrow">MONTAGEM E EXECUÇÃO</div><div class="section"><h2 id="trainingTitle">Treino Segunda-feira</h2><span class="pill" id="trainingSetsPill">DIA SEM EXERCÍCIOS</span></div>
+<button class="btn ghost wide" onclick="showPage('library',document.querySelector('[data-page=library]'))">EXPLORAR EXERCÍCIOS E GIFS DA API</button><div class="daygrid"><button class="daybtn active" data-day="segunda" onclick="selectDay('segunda')">SEGUNDA</button><button class="daybtn" data-day="terca" onclick="selectDay('terca')">TERÇA</button><button class="daybtn" data-day="quarta" onclick="selectDay('quarta')">QUARTA</button><button class="daybtn" data-day="quinta" onclick="selectDay('quinta')">QUINTA</button><button class="daybtn" data-day="sexta" onclick="selectDay('sexta')">SEXTA</button></div>
+<div class="daycontrols"><label class="resttoggle"><input type="checkbox" id="dayRestToggle" onchange="toggleDayRest(this.checked)"><span>Marcar dia como descanso</span></label><button type="button" class="btn secondary" style="padding:8px 12px;font-size:11px" onclick="beginWorkoutSession()">INICIAR SESSÃO</button></div>
+<div id="draftBanner" class="draftbanner"><span id="draftBannerText">Progresso do treino salvo automaticamente neste aparelho.</span><button type="button" class="btn ghost" onclick="clearCurrentDayDraft(true)">LIMPAR MARCAÇÕES</button></div>
+<div id="firstSetPrompt" class="setprompt"><div class="setprompt-title" id="firstSetPromptTitle">Você concluiu a 1ª série?</div><div class="setprompt-sub" id="firstSetPromptSub">Se sim, iniciaremos o descanso configurado para a 2ª série.</div><div class="setprompt-actions"><button type="button" class="btn" onclick="confirmFirstSetDone(true)">SIM, INICIAR DESCANSO</button><button type="button" class="btn secondary" onclick="confirmFirstSetDone(false)">AINDA NÃO</button></div></div>
+<div class="hint">Adicione seus exercícios com <b>+ ADICIONAR EXERCÍCIO</b>, ajuste o descanso de cada exercício em <b>EDITAR</b>, veja/fixe o GIF em <b>COMO EXECUTAR</b> e exporte sua ficha para backup ou outro perfil.</div>
+<div class="timer"><div><div class="small">DESCANSO ENTRE SÉRIES</div><strong id="timerDisplay">02:00</strong><div class="timer-sub" id="timerContext">Descanso padrão</div></div><div class="timerbtns"><button class="btn" id="timerStart" onclick="toggleTimer()">INICIAR</button><button class="btn secondary" onclick="resetTimer()">↺</button></div></div>
+<div class="card"><div class="small" style="margin-bottom:6px">EXERCÍCIOS DO DIA</div><div id="exerciseList"></div><div id="addExerciseBox" class="addbox" style="display:none"><div class="small"><b>Adicionar exercício nesta ficha</b></div><label class="field">Nome do exercício em português<input id="newExName" placeholder="Ex.: Cadeira Extensora"></label><label class="field">Grupo muscular<select id="newExMuscle"><option>Peito</option><option>Costas</option><option>Ombros</option><option>Bíceps</option><option>Tríceps</option><option>Quadríceps</option><option>Posterior de coxa</option><option>Quadríceps e glúteos</option><option>Glúteos</option><option>Abdutores</option><option>Panturrilhas</option><option>Abdômen</option></select></label><label class="field">Tempo de descanso deste exercício (segundos)<input id="newExRest" type="number" min="10" max="600" step="5" placeholder="Ex.: 120 (usa o padrão se vazio)"></label><div class="exedit-actions"><button class="btn" onclick="addExerciseToPlan()">SALVAR EXERCÍCIO</button><button class="btn secondary" onclick="toggleAddExercise(false)">CANCELAR</button></div></div><div class="planfooter"><button class="btn secondary" onclick="toggleAddExercise()">+ ADICIONAR EXERCÍCIO</button><button class="btn ghost" onclick="resetCurrentPlan()">LIMPAR DIA</button></div><div class="planfooter"><button type="button" class="btn ghost" onclick="exportPlanFile()">EXPORTAR FICHA (.JSON)</button><button type="button" class="btn ghost" onclick="document.getElementById('importPlanFile').click()">IMPORTAR FICHA (.JSON)</button><input id="importPlanFile" type="file" accept="application/json,.json" hidden onchange="importPlanFile(event)"></div><button class="btn wide" onclick="saveWorkout()">FINALIZAR E SALVAR TREINO</button></div>
+</section>
+
+<section id="library" class="page"><div class="eyebrow">CATÁLOGO DA API • EXERCÍCIOS E GIFS</div><div class="section"><h2>Exercícios da API</h2><span class="pill" id="libraryCount">0 ITENS</span></div><p class="small">Pesquise os exercícios da base (`cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0`), veja o GIF, adicione ao dia selecionado (com opção de nome em português) ou fixe o GIF em um exercício.</p><div class="librarytools"><div class="searchrow"><input id="exerciseSearch" class="searchbox" type="search" placeholder="Buscar na API (ex.: curl, squat, press, row, lat)..." onkeydown="if(event.key==='Enter')searchApiAndRender()" oninput="renderLibrary()"><button type="button" class="btn" onclick="searchApiAndRender()">BUSCAR</button></div><select id="muscleFilter" class="filterbox" onchange="renderLibrary()"><option value="all">Todos os grupos musculares</option></select></div><div class="catbar"><span class="small" id="catalogSummary">Carregando base inicial...</span><div class="catbar-actions"><button type="button" class="btn secondary" id="loadMoreCatBtn" onclick="loadMoreCatalogPages(3,50)">CARREGAR BASE</button></div></div><div id="libraryList" class="librarygrid"></div></section>
+
+<section id="progress" class="page"><div class="eyebrow">ACOMPANHE SUA JORNADA</div><div class="section"><h2>Evolução</h2></div><div class="card"><div class="label">Peso corporal atual</div><div class="value"><span id="progressWeight">—</span></div><label class="field">Atualizar peso (kg)<input id="weightInput" type="number" step="0.1" placeholder="Ex.: 89.5"></label><button class="btn" onclick="saveWeight()">SALVAR PESO</button></div><div class="section"><h2>Histórico de peso</h2></div><div class="card"><div id="weightHistory" class="weightlog"><div class="empty">Nenhum peso registrado ainda.</div></div></div><div class="section"><h2>Histórico de treinos</h2></div><div class="card" id="history"><div class="empty">Seus treinos concluídos aparecerão aqui.</div></div></section>
+<section id="profile" class="page"><div class="eyebrow">CONFIGURAÇÕES PESSOAIS</div><div class="section"><h2>Atleta ativo</h2></div><div class="card"><div class="small">Cada perfil mantém seus próprios treinos, cargas, fichas e histórico de peso separados neste dispositivo.</div><div class="profileswitch"><select id="profileSwitcher" onchange="switchProfile(this.value)"></select><button class="btn secondary" onclick="createNewProfile()">+ NOVO PERFIL</button></div><div style="display:flex;justify-content:flex-end"><button class="btn ghost" style="padding:6px 10px;font-size:11px" id="deleteProfileBtn" onclick="deleteCurrentProfile()">REMOVER PERFIL ATUAL</button></div></div><div class="section"><h2>Seu perfil</h2></div><div class="card"><label class="field">Nome<input id="userName" value="Atleta 1"></label><label class="field">Objetivo<select id="goal"><option>Hipertrofia e definição</option><option>Ganho de massa muscular</option><option>Emagrecimento</option><option>Condicionamento físico</option></select></label><label class="field">Peso inicial (kg — opcional)<input id="initialWeight" type="number" step="0.1" placeholder="Opcional"></label><label class="field">Séries efetivas por exercício<select id="setCount" onchange="changeSetCount()"><option value="2">2 séries</option><option value="3">3 séries</option><option value="4">4 séries</option></select></label><label class="field">Descanso padrão<select id="restSetting" onchange="changeRest()"><option value="60">60 segundos</option><option value="90">90 segundos</option><option value="120" selected>120 segundos</option><option value="150">150 segundos</option><option value="180">180 segundos</option></select></label><button class="btn wide" onclick="saveProfile()">SALVAR PERFIL</button><div class="section"><h2>Fichas e Backup</h2></div><div class="profileactions"><button type="button" class="btn secondary" onclick="exportPlanFile()">EXPORTAR FICHA (.JSON)</button><button type="button" class="btn secondary" onclick="document.getElementById('importPlanFileProfile').click()">IMPORTAR FICHA (.JSON)</button><input id="importPlanFileProfile" type="file" accept="application/json,.json" hidden onchange="importPlanFile(event)"></div><div class="profileactions"><button class="btn secondary" onclick="exportData()">EXPORTAR BACKUP COMPLETO</button><button class="btn secondary" onclick="document.getElementById('importFile').click()">IMPORTAR BACKUP COMPLETO</button><input id="importFile" type="file" accept="application/json,.json" hidden onchange="importData(event)"></div><button class="btn ghost wide danger" onclick="clearData()">APAGAR TODOS OS DADOS</button></div><p class="small installnote">EVOLVE • Versão 1.9.6-gh • Salvamento automático em tempo real + Exportação/Importação de Fichas (.json).</p></section>
+</main></div>
+<nav class="nav"><div class="navinner"><button class="active" data-page="home" onclick="showPage('home',this)"><b>⌂</b>Início</button><button data-page="training" onclick="showPage('training',this)"><b>▤</b>Treinos</button><button data-page="library" onclick="showPage('library',this)"><b>＋</b>Exercícios</button><button data-page="progress" onclick="showPage('progress',this)"><b>↗</b>Evolução</button><button data-page="profile" onclick="showPage('profile',this)"><b>◎</b>Perfil</button></div></nav><div id="toast" class="toast"></div>
+<script>
+const DAY_ORDER=['segunda','terca','quarta','quinta','sexta'];
+const DAY_ALIASES={upper1:'segunda',lower1:'terca',upper2:'quinta',lower2:'sexta'};
+const PLAN_VERSION='1.9.5-gh';
+const COMPATIBLE_PLAN_VERSIONS=['1.9.5-gh','1.9.6-gh'];
+
+const MUSCLE_PT_LABELS={
+ quadriceps:'Quadríceps',
+ hamstrings:'Posterior de coxa',
+ glutes:'Glúteos',
+ abductors:'Abdutores',
+ adductors:'Adutores',
+ calves:'Panturrilhas',
+ chest:'Peito',
+ lats:'Dorsais (Costas)',
+ 'upper-back':'Costas superiores',
+ 'lower-back':'Lombar (Costas)',
+ shoulders:'Ombros',
+ biceps:'Bíceps',
+ triceps:'Tríceps',
+ forearms:'Antebraços',
+ abs:'Abdômen',
+ waist:'Abdômen',
+ back:'Costas',
+ cardiorespiratory:'Cardiorrespiratório'
+};
+
+function translateMusclePt(val){
+ const key=String(val||'').trim().toLowerCase();
+ if(MUSCLE_PT_LABELS[key])return MUSCLE_PT_LABELS[key];
+ return String(val||'').replace(/-/g,' ');
+}
+
+/* Sem ficha de demonstração: todos os dias começam vazios para o usuário montar livremente */
+const DEFAULT_PLANS={
+ segunda:{name:'Segunda-feira',restDay:false,items:[]},
+ terca:{name:'Terça-feira',restDay:false,items:[]},
+ quarta:{name:'Quarta-feira',restDay:false,items:[]},
+ quinta:{name:'Quinta-feira',restDay:false,items:[]},
+ sexta:{name:'Sexta-feira',restDay:false,items:[]}
+};
+const MUSCLE_OPTIONS=['Peito','Costas','Ombros','Bíceps','Tríceps','Quadríceps','Posterior de coxa','Quadríceps e glúteos','Glúteos','Abdutores','Adutores','Panturrilhas','Abdômen','Antebraços'];
+
+function cloneDefaultPlans(){return JSON.parse(JSON.stringify(DEFAULT_PLANS))}
+function normalizePlansObject(rawPlans){
+ const out={};
+ for(const day of DAY_ORDER){
+  const rawDay=rawPlans?.[day];
+  if(rawDay&&Array.isArray(rawDay.items)){
+   out[day]={
+    name:DEFAULT_PLANS[day].name,
+    restDay:Boolean(rawDay.restDay),
+    items:rawDay.items.map(x=>{
+     const exName=String(x?.[0]||'');
+     const exMuscle=String(x?.[1]||'Peito');
+     const exRest=(typeof x?.[2]==='number'&&x[2]>0)?Number(x[2]):null;
+     return [exName,exMuscle,exRest];
+    })
+   };
+  }
+ }
+ for(const day of DAY_ORDER){
+  if(!out[day]){
+   out[day]=JSON.parse(JSON.stringify(DEFAULT_PLANS[day]));
+  }
+ }
+ return out;
+}
+function createProfileRecord(name,overrides={}){
+ return {
+  id:'prof_'+Date.now()+'_'+Math.random().toString(36).slice(2,6),
+  name:name||'Atleta',
+  weight:null,
+  weights:[],
+  workouts:[],
+  drafts:{},
+  activeDay:'segunda',
+  activePage:'home',
+  profile:{name:name||'Atleta',goal:'Hipertrofia e definição',initialWeight:''},
+  settings:{sets:2,rest:120},
+  plans:cloneDefaultPlans(),
+  planVersion:PLAN_VERSION,
+  ...overrides
+ };
+}
+
+let rootStore;
+try{rootStore=JSON.parse(localStorage.getItem('evolveData')||'{}')}catch(e){rootStore={}}
+if(!rootStore.pinnedGifs||typeof rootStore.pinnedGifs!=='object')rootStore.pinnedGifs={};
+
+if(!Array.isArray(rootStore.profiles)||!rootStore.profiles.length){
+ const p1=createProfileRecord('Atleta 1');
+ const p2=createProfileRecord('Atleta 2');
+ rootStore={version:PLAN_VERSION,activeProfileId:p1.id,pinnedGifs:rootStore.pinnedGifs||{},profiles:[p1,p2]};
+ localStorage.setItem('evolveData',JSON.stringify(rootStore));
+}
+for(const p of rootStore.profiles){
+ p.workouts=Array.isArray(p.workouts)?p.workouts:[];
+ p.weights=Array.isArray(p.weights)?p.weights:[];
+ p.weight=p.weights.length?p.weights[0].weight:(typeof p.weight==='number'&&p.weight>0?p.weight:null);
+ p.profile=p.profile||{name:p.name||'Atleta',goal:'Hipertrofia e definição',initialWeight:''};
+ p.settings={sets:2,rest:120,...(p.settings||{})};
+ if(!p.drafts||typeof p.drafts!=='object')p.drafts={};
+ if(!COMPATIBLE_PLAN_VERSIONS.includes(p.planVersion)){
+  p.plans=cloneDefaultPlans();
+  p.planVersion=PLAN_VERSION;
+ }else{
+  p.plans=normalizePlansObject(p.plans);
+ }
+}
+let data=rootStore.profiles.find(p=>p.id===rootStore.activeProfileId)||rootStore.profiles[0];
+rootStore.activeProfileId=data.id;
+localStorage.setItem('evolveData',JSON.stringify(rootStore));
+
+let currentDay=(DAY_ORDER.includes(data.activeDay)?data.activeDay:'segunda'),editingIndex=null,openDemoIndex=null,timerSeconds=data.settings.rest||120,timerInterval=null,activeTimerContext='Descanso padrão',pendingPromptExerciseIdx=null,timerEndTimestamp=null;
+
+function saveRawStore(){
+ try{localStorage.setItem('evolveData',JSON.stringify(rootStore))}catch(e){}
+}
+function persist(){saveRawStore();refresh()}
+
+/* Persistência em tempo real da sessão de treino (não perde dados ao bloquear tela ou trocar de app) */
+function getDayDraft(day=currentDay){
+ if(!data.drafts||typeof data.drafts!=='object')data.drafts={};
+ if(!data.drafts[day]||typeof data.drafts[day]!=='object')data.drafts[day]={sets:{},updatedAt:0};
+ if(!data.drafts[day].sets||typeof data.drafts[day].sets!=='object')data.drafts[day].sets={};
+ return data.drafts[day];
+}
+
+function captureSetInput(exIdx,setIdx,field,rawVal){
+ const draft=getDayDraft(currentDay);
+ const key=`${exIdx}_${setIdx}`;
+ const prev=draft.sets[key]||{w:'',r:'',c:false};
+ prev[field]=field==='c'?Boolean(rawVal):String(rawVal??'');
+ if(!prev.w&&!prev.r&&!prev.c){
+  delete draft.sets[key];
+ }else{
+  draft.sets[key]=prev;
+ }
+ draft.updatedAt=Date.now();
+ saveRawStore();
+ updateDraftBanner();
+}
+
+function restoreDayDraftInputs(day=currentDay){
+ const draft=getDayDraft(day);
+ const n=Number(data.settings.sets)||2;
+ const items=data.plans[day]?.items||[];
+ items.forEach((_,i)=>{
+  for(let j=0;j<n;j++){
+   const saved=draft.sets[`${i}_${j}`];
+   const wEl=document.getElementById(`w${i}_${j}`);
+   const rEl=document.getElementById(`r${i}_${j}`);
+   const cEl=document.getElementById(`c${i}_${j}`);
+   if(wEl)wEl.value=saved?.w??'';
+   if(rEl)rEl.value=saved?.r??'';
+   if(cEl)cEl.checked=Boolean(saved?.c);
+  }
+ });
+ updateDraftBanner();
+}
+
+function hasDayDraftData(day=currentDay){
+ const draft=data.drafts?.[day];
+ if(!draft?.sets)return false;
+ return Object.values(draft.sets).some(s=>s&&(s.w||s.r||s.c));
+}
+
+function updateDraftBanner(){
+ const banner=document.getElementById('draftBanner');
+ const textEl=document.getElementById('draftBannerText');
+ if(!banner)return;
+ const active=hasDayDraftData(currentDay);
+ banner.classList.toggle('active',active);
+ if(active&&textEl){
+  const draft=data.drafts[currentDay];
+  const entries=Object.values(draft.sets);
+  const doneCount=entries.filter(s=>s?.c).length;
+  const filledCount=entries.filter(s=>s&&(s.w||s.r||s.c)).length;
+  textEl.textContent=`Progresso salvo: ${doneCount} série(s) marcada(s) • ${filledCount} campo(s) preenchido(s).`;
+ }
+}
+
+function clearCurrentDayDraft(askConfirm=false){
+ if(askConfirm&&!confirm(`Limpar todas as cargas, repetições e marcações em andamento de ${data.plans[currentDay].name}?`))return;
+ if(!data.drafts)data.drafts={};
+ data.drafts[currentDay]={sets:{},updatedAt:0};
+ saveRawStore();
+ renderExercises();
+ if(askConfirm)notify('Marcações do dia limpas.');
+}
+
+function shiftDraftOnMove(day,idxA,idxB){
+ const draft=getDayDraft(day);
+ const n=Number(data.settings.sets)||2;
+ for(let j=0;j<n;j++){
+  const kA=`${idxA}_${j}`,kB=`${idxB}_${j}`;
+  const tmp=draft.sets[kA];
+  if(draft.sets[kB])draft.sets[kA]=draft.sets[kB];
+  else delete draft.sets[kA];
+  if(tmp)draft.sets[kB]=tmp;
+  else delete draft.sets[kB];
+ }
+ draft.updatedAt=Date.now();
+}
+
+function shiftDraftOnRemove(day,removedIdx,totalBefore){
+ const draft=getDayDraft(day);
+ const n=Number(data.settings.sets)||2;
+ const nextSets={};
+ for(let i=0;i<totalBefore;i++){
+  if(i===removedIdx)continue;
+  const newIdx=i>removedIdx?i-1:i;
+  for(let j=0;j<n;j++){
+   const oldVal=draft.sets[`${i}_${j}`];
+   if(oldVal)nextSets[`${newIdx}_${j}`]=oldVal;
+  }
+ }
+ draft.sets=nextSets;
+ draft.updatedAt=Date.now();
+}
+
+/* Persistência do timer de descanso mesmo se o navegador suspender a aba */
+function saveTimerState(){
+ try{
+  localStorage.setItem('evolveTimerState',JSON.stringify({
+   profileId:data.id,
+   running:Boolean(timerInterval&&timerEndTimestamp),
+   endTimestamp:timerEndTimestamp||null,
+   remainingSeconds:timerSeconds,
+   context:activeTimerContext
+  }));
+ }catch(e){}
+}
+
+function restoreTimerState(){
+ try{
+  const raw=JSON.parse(localStorage.getItem('evolveTimerState')||'null');
+  if(!raw||raw.profileId!==data.id)return;
+  activeTimerContext=raw.context||'Descanso padrão';
+  if(raw.running&&raw.endTimestamp){
+   const left=Math.ceil((raw.endTimestamp-Date.now())/1000);
+   if(left>0){
+    timerSeconds=left;
+    timerEndTimestamp=raw.endTimestamp;
+    startTimerLoop();
+   }else{
+    timerSeconds=0;
+    timerEndTimestamp=null;
+    activeTimerContext='Descanso concluído';
+    document.getElementById('timerStart').textContent='INICIAR';
+    updateTimer();
+    saveTimerState();
+   }
+  }else if(typeof raw.remainingSeconds==='number'&&raw.remainingSeconds>0){
+   timerSeconds=raw.remainingSeconds;
+   timerEndTimestamp=null;
+   updateTimer();
+  }
+ }catch(e){}
+}
+
+function showPage(id,el){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ const targetPage=document.getElementById(id);
+ if(targetPage)targetPage.classList.add('active');
+ document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+ const navBtn=el||document.querySelector(`[data-page="${id}"]`);
+ if(navBtn)navBtn.classList.add('active');
+ data.activePage=id;
+ saveRawStore();
+ if(id==='library'&&!catalogState.items.length){loadMoreCatalogPages(3,50)}
+}
+function notify(msg){let t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.toastTimeout);window.toastTimeout=setTimeout(()=>t.style.display='none',2400)}
+function startWorkout(day){selectDay(DAY_ALIASES[day]||day);showPage('training',document.querySelector('[data-page=training]'))}
+
+const demoCache={};
+const pickerResults={};
+const catalogState={items:[],searchItems:[],nextCursor:null,hasNextPage:true,loading:false,expandedKeys:new Set()};
+
+function normText(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim()}
+function gifKeyForName(name){return normText(name)}
+
+function getPinnedGif(exName){
+ const k=gifKeyForName(exName);
+ return k&&rootStore.pinnedGifs?rootStore.pinnedGifs[k]||null:null;
+}
+function setPinnedGif(exName,gifObj){
+ const k=gifKeyForName(exName);
+ if(!k||!gifObj?.url)return;
+ if(!rootStore.pinnedGifs)rootStore.pinnedGifs={};
+ rootStore.pinnedGifs[k]={
+  url:gifObj.url,
+  backupUrl:gifObj.backupUrl||gifObj.url,
+  apiLabel:gifObj.apiLabel||'',
+  savedAt:Date.now()
+ };
+ saveRawStore();
+}
+
+function getExerciseRestSeconds(item){
+ const custom=item?.[2];
+ if(typeof custom==='number'&&!isNaN(custom)&&custom>=10)return Math.round(custom);
+ return Number(data.settings.rest)||120;
+}
+
+const GH_DB_BASE='https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0';
+const GH_MUSCLES=['quadriceps','hamstrings','glutes','abductors','adductors','calves','chest','lats','upper-back','lower-back','shoulders','biceps','triceps','forearms','abs'];
+
+function mapMusclePtFromApi(raw){
+ const s=normText((Array.isArray(raw?.targetMuscles)?raw.targetMuscles.join(' '):'')+' '+(Array.isArray(raw?.bodyParts)?raw.bodyParts.join(' '):'')+' '+(raw?.muscle||'')+' '+(raw?.bodyPart||''));
+ if(s.includes('pectoral')||s.includes('chest'))return 'Peito';
+ if(s.includes('lat')||s.includes('trapezius')||s.includes('erector')||s.includes('back')||s.includes('rhomboid'))return 'Costas';
+ if(s.includes('deltoid')||s.includes('shoulder'))return 'Ombros';
+ if(s.includes('bicep'))return 'Bíceps';
+ if(s.includes('tricep'))return 'Tríceps';
+ if(s.includes('quad'))return 'Quadríceps';
+ if(s.includes('hamstring'))return 'Posterior de coxa';
+ if(s.includes('glute'))return 'Glúteos';
+ if(s.includes('abductor'))return 'Abdutores';
+ if(s.includes('adductor'))return 'Adutores';
+ if(s.includes('calves')||s.includes('calf'))return 'Panturrilhas';
+ if(s.includes('abdomin')||s.includes('waist')||s.includes('core')||s.includes('abs'))return 'Abdômen';
+ if(s.includes('forearm'))return 'Antebraços';
+ return 'Peito';
+}
+
+function extractApiPage(payload){
+ const arr=Array.isArray(payload)?payload:(Array.isArray(payload?.data)?payload.data:(Array.isArray(payload?.exercises)?payload.exercises:(Array.isArray(payload?.results)?payload.results:(Array.isArray(payload?.items)?payload.items:[]))));
+ const meta=payload?.meta||{};
+ const nextCursor=meta.nextCursor||payload?.nextCursor||null;
+ const hasNextPage=typeof meta.hasNextPage==='boolean'?meta.hasNextPage:Boolean(nextCursor);
+ return {items:arr,nextCursor,hasNextPage};
+}
+
+function resolveGifUrl(item){
+ const rawGif=item?.gifUrl||item?.gif||item?.imageUrl||item?.image||'';
+ if(typeof rawGif==='string'&&rawGif.trim()){
+  if(rawGif.startsWith('http://')||rawGif.startsWith('https://'))return rawGif.trim();
+  const clean=rawGif.replace(/^\.\//,'').replace(/^\//,'');
+  return GH_DB_BASE+'/'+clean;
+ }
+ const slug=String(item?.slug||item?.id||item?.exerciseId||'').trim();
+ const muscle=String(item?.muscle||item?.targetMuscle||(Array.isArray(item?.targetMuscles)?item.targetMuscles[0]:'')||'').trim();
+ if(slug&&muscle){
+  return `${GH_DB_BASE}/${encodeURIComponent(muscle)}/${encodeURIComponent(slug)}.gif`;
+ }
+ if(slug){
+  return `${GH_DB_BASE}/${encodeURIComponent(slug)}.gif`;
+ }
+ return '';
+}
+
+function mapApiExercise(item,fallbackLabel=''){
+ const id=String(item?.id||item?.slug||item?.exerciseId||item?.name||'').trim();
+ const url=resolveGifUrl(item);
+ if(!url)return null;
+ const targets=Array.isArray(item?.targetMuscles)?item.targetMuscles:[...(item?.muscle?[item.muscle]:[])];
+ const parts=Array.isArray(item?.bodyParts)?item.bodyParts:[...(item?.bodyPart?[item.bodyPart]:[])];
+ const equips=Array.isArray(item?.equipments)?item.equipments:[...(item?.equipment?[item.equipment]:[])];
+ const instructions=Array.isArray(item?.instructions)?item.instructions:(Array.isArray(item?.steps)?item.steps:[]);
+ const name=fallbackLabel||item?.name||item?.title||item?.slug||'Exercício';
+ const targetsPt=targets.map(translateMusclePt);
+ const partsPt=parts.map(translateMusclePt);
+ return {
+  id:id||normText(name+url),
+  url,
+  backupUrl:url,
+  name,
+  apiLabel:name,
+  targets,
+  parts,
+  targetsPt,
+  partsPt,
+  equips,
+  instructions,
+  suggestedMusclePt:mapMusclePtFromApi(item),
+  metaText:[...targets,...parts,...targetsPt,...partsPt,...equips].filter(Boolean).join(' • ')
+ };
+}
+
+function appendCatalogItems(newItems,nextCursor,hasNextPage){
+ const seen=new Set(catalogState.items.map(it=>String(it?.id||it?.slug||it?.exerciseId||normText(it?.name))));
+ for(const it of newItems){
+  const key=String(it?.id||it?.slug||it?.exerciseId||normText(it?.name));
+  if(key&&!seen.has(key)){
+   seen.add(key);
+   catalogState.items.push(it);
+  }
+ }
+ catalogState.nextCursor=nextCursor||null;
+ catalogState.hasNextPage=Boolean(nextCursor&&hasNextPage);
+ refreshMuscleFilterOptions();
+}
+
+function refreshMuscleFilterOptions(){
+ const sel=document.getElementById('muscleFilter');
+ if(!sel)return;
+ const currentVal=sel.value||'all';
+ const set=new Set(GH_MUSCLES);
+ for(const it of catalogState.items){
+  for(const m of (it?.targetMuscles||[]))if(m)set.add(String(m).toLowerCase());
+  for(const b of (it?.bodyParts||[]))if(b)set.add(String(b).toLowerCase());
+  if(it?.muscle)set.add(String(it.muscle).toLowerCase());
+  if(it?.bodyPart)set.add(String(it.bodyPart).toLowerCase());
+ }
+ const sorted=[...set].sort((a,b)=>translateMusclePt(a).localeCompare(translateMusclePt(b),'pt-BR'));
+ sel.innerHTML='<option value="all">Todos os grupos musculares</option>'+sorted.map(m=>`<option value="${escapeAttr(m)}"${m===currentVal?' selected':''}>${escapeAttr(translateMusclePt(m))}</option>`).join('');
+}
+
+async function fetchJsonSafe(url){
+ const resp=await fetch(url,{headers:{'Accept':'application/json'}});
+ if(!resp.ok)throw new Error('HTTP '+resp.status);
+ return await resp.json();
+}
+
+async function fetchCatalogPage(cursor=null,limit=50){
+ if(!cursor){
+  const urls=[
+   `${GH_DB_BASE}/api/en/exercises.json`,
+   `${GH_DB_BASE}/api/exercises.json`,
+   `${GH_DB_BASE}/api/en/index.json`,
+   `${GH_DB_BASE}/api/index.json`
+  ];
+  for(const u of urls){
+   try{
+    const json=await fetchJsonSafe(u);
+    const page=extractApiPage(json);
+    if(page.items.length){
+     return {items:page.items,nextCursor:null,hasNextPage:false};
+    }
+   }catch(e){}
+  }
+  const muscleQueue=[...GH_MUSCLES];
+  const combined=[];
+  for(const m of muscleQueue){
+   try{
+    const json=await fetchJsonSafe(`${GH_DB_BASE}/api/en/muscles/${encodeURIComponent(m)}.json`);
+    const page=extractApiPage(json);
+    for(const it of page.items){
+     combined.push({...it,muscle:it?.muscle||m,targetMuscles:it?.targetMuscles||[m]});
+    }
+   }catch(e){}
+  }
+  return {items:combined,nextCursor:null,hasNextPage:false};
+ }
+ return {items:[],nextCursor:null,hasNextPage:false};
+}
+
+async function loadMoreCatalogPages(pagesToFetch=3,limit=50){
+ if(catalogState.loading)return catalogState.items;
+ catalogState.loading=true;
+ updateCatalogUiState();
+ try{
+  if(!catalogState.items.length){
+   const first=await fetchCatalogPage(null,limit);
+   appendCatalogItems(first.items,first.nextCursor,first.hasNextPage);
+  }
+ }catch(e){
+  notify('Não foi possível carregar a base de exercícios agora.');
+ }finally{
+  catalogState.loading=false;
+  updateCatalogUiState();
+  renderLibrary();
+ }
+ return catalogState.items;
+}
+
+async function searchApiAndRender(){
+ const q=(document.getElementById('exerciseSearch')?.value||'').trim();
+ if(!q){
+  catalogState.searchItems=[];
+  renderLibrary();
+  return;
+ }
+ if(!catalogState.items.length){
+  await loadMoreCatalogPages(3,50);
+ }
+ const words=normText(q).split(' ').filter(Boolean);
+ const matches=catalogState.items.filter(raw=>{
+  const m=mapApiExercise(raw);
+  if(!m)return false;
+  const hay=normText(m.apiLabel+' '+m.metaText+' '+m.id);
+  return words.every(w=>hay.includes(w));
+ });
+ catalogState.searchItems=matches;
+ updateCatalogUiState();
+ renderLibrary();
+}
+
+function updateCatalogUiState(){
+ const sum=document.getElementById('catalogSummary');
+ const btn=document.getElementById('loadMoreCatBtn');
+ if(sum){
+  const statusText=catalogState.loading?'Carregando base...':(catalogState.items.length?'Base carregada':'Pronto para carregar');
+  sum.textContent=`${catalogState.items.length} exercícios • ${statusText}`;
+ }
+ if(btn){
+  btn.disabled=catalogState.loading||catalogState.items.length>0;
+  btn.textContent=catalogState.items.length?'BASE CARREGADA':'CARREGAR BASE';
+ }
+}
+
+function getFilteredCatalogItems(){
+ const q=normText(document.getElementById('exerciseSearch')?.value||'');
+ const muscleFilter=(document.getElementById('muscleFilter')?.value||'all').toLowerCase();
+ const words=q.split(' ').filter(Boolean);
+
+ const pool=[];
+ const seen=new Set();
+ for(const raw of [...catalogState.searchItems,...catalogState.items]){
+  const mapped=mapApiExercise(raw);
+  if(!mapped||seen.has(mapped.url))continue;
+  seen.add(mapped.url);
+  pool.push(mapped);
+ }
+
+ return pool.filter(it=>{
+  if(muscleFilter!=='all'){
+   const mHay=[...it.targets,...it.parts].map(x=>String(x||'').toLowerCase());
+   if(!mHay.includes(muscleFilter))return false;
+  }
+  if(!words.length)return true;
+  const hay=normText(it.apiLabel+' '+it.metaText+' '+it.id);
+  return words.every(w=>hay.includes(w));
+ });
+}
+
+function toggleCatalogCardDetails(key){
+ if(catalogState.expandedKeys.has(key))catalogState.expandedKeys.delete(key);
+ else catalogState.expandedKeys.add(key);
+ renderLibrary();
+}
+
+function addCatalogItemToCurrentDay(idx){
+ const list=getFilteredCatalogItems();
+ const item=list[idx];
+ if(!item)return;
+ const customPt=prompt('Nome do exercício na sua ficha (em português):',item.apiLabel);
+ if(customPt===null)return;
+ const label=customPt.trim()||item.apiLabel||'Exercício';
+ data.plans[currentDay].restDay=false;
+ data.plans[currentDay].items.push([label,item.suggestedMusclePt,null]);
+ setPinnedGif(label,item);
+ persist();
+ renderExercises();
+ notify(`"${label}" adicionado em ${data.plans[currentDay].name} com GIF salvo!`);
+}
+
+function pinCatalogItemToPlanExercise(itemIdx,planExIdx){
+ const list=getFilteredCatalogItems();
+ const item=list[itemIdx];
+ const target=data.plans[currentDay]?.items?.[planExIdx];
+ if(!item||!target)return;
+ setPinnedGif(target[0],item);
+ const cacheKey=gifKeyForName(target[0]);
+ const prev=demoCache[cacheKey]?.options||[];
+ demoCache[cacheKey]={options:[item,...prev.filter(o=>o.url!==item.url)],idx:0};
+ persist();
+ notify(`GIF fixado em "${target[0]}"!`);
+}
+
+function renderLibrary(){
+ const list=getFilteredCatalogItems();
+ const countEl=document.getElementById('libraryCount');
+ const box=document.getElementById('libraryList');
+ if(countEl)countEl.textContent=list.length+' EXERCÍCIOS';
+ if(!box)return;
+ if(!list.length){
+  box.innerHTML=catalogState.loading
+   ?'<div class="emptysearch">Carregando exercícios da base...</div>'
+   :'<div class="emptysearch">Nenhum exercício encontrado com esse filtro. Tente outra palavra (ex.: <i>curl</i>, <i>squat</i>, <i>press</i>, <i>row</i>).</div>';
+  return;
+ }
+ const dayPlanItems=data.plans[currentDay]?.items||[];
+ box.innerHTML=list.slice(0,60).map((it,idx)=>{
+  const isOpen=catalogState.expandedKeys.has(it.id);
+  const stepsHtml=it.instructions.length
+   ?`<ol>${it.instructions.map(st=>`<li>${escapeAttr(String(st).replace(/^Step:\d+\s*/i,''))}</li>`).join('')}</ol>`
+   :'<p>Sem instruções adicionais informadas para este item na base.</p>';
+  const pinToPlanSelect=dayPlanItems.length
+   ?`<div class="small" style="margin-top:8px"><b>Fixar este GIF em um exercício de ${data.plans[currentDay].name}:</b><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:5px">${dayPlanItems.map((pe,pIdx)=>`<button type="button" class="mini active-demo" onclick="pinCatalogItemToPlanExercise(${idx},${pIdx})">${pIdx+1}. ${escapeAttr(pe[0])}</button>`).join('')}</div></div>`
+   :'';
+  return `<article class="libitem${isOpen?' open':''}" id="catcard-${idx}">
+   <div class="libtop">
+    <div class="libthumb"><img src="${it.url}" alt="${escapeAttr(it.apiLabel)}" loading="lazy" onerror="this.style.display='none'"></div>
+    <div style="min-width:0;flex:1">
+     <h3>${escapeAttr(it.apiLabel)}</h3>
+     <div class="libmeta">${escapeAttr(it.equips.join(', ')||'Equipamento não informado')}</div>
+     ${it.targetsPt.map(t=>`<span class="musclechip">${escapeAttr(t)}</span>`).join('')}
+     ${it.partsPt.map(b=>`<span class="musclechip">${escapeAttr(b)}</span>`).join('')}
+    </div>
+   </div>
+   <div class="libactions">
+    <button type="button" class="btn secondary" onclick="addCatalogItemToCurrentDay(${idx})">+ ADD NA ${data.plans[currentDay].name.toUpperCase().slice(0,3)}</button>
+    <button type="button" class="btn ghost" onclick="toggleCatalogCardDetails('${escapeAttr(it.id)}')">${isOpen?'FECHAR DETALHES':'VER GIF E PASSOS'}</button>
+   </div>
+   <div class="libdetails">
+    <div class="libmedia"><img src="${it.url}" alt="${escapeAttr(it.apiLabel)}" loading="lazy"><div class="libmedia-caption"><span>${escapeAttr(it.apiLabel)}</span><a href="${it.url}" target="_blank" rel="noopener">Abrir GIF</a></div></div>
+    <h4>Execução na base</h4>
+    ${stepsHtml}
+    ${pinToPlanSelect}
+   </div>
+  </article>`;
+ }).join('');
+}
+
+/* Seleção e fixação de GIF na ficha de treino */
+function renderTrainingDemoHtml(exName,muscle,mediaId){
+ const pinned=getPinnedGif(exName);
+ const hasPinned=Boolean(pinned?.url);
+ return `<div class="exdemo"><h4>Demonstração — ${escapeAttr(exName)}</h4><div class="small" style="margin-bottom:6px">Grupo: ${escapeAttr(muscle)} ${hasPinned?'<span class="pinnedbadge">✓ GIF SALVO</span>':''}</div><div class="libmedia" id="${mediaId}"><div class="libmedia-state">Carregando demonstração…</div></div></div>`;
+}
+function toggleTrainingDemo(i){
+ openDemoIndex=openDemoIndex===i?null:i;
+ editingIndex=null;
+ renderExercises();
+ if(openDemoIndex===i){
+  const item=data.plans[currentDay].items[i];
+  fetchDemoMedia(-1,'trainmedia_'+i,'retryTrainDemo',i,item[0]);
+ }
+}
+function retryTrainDemo(i){
+ const item=data.plans[currentDay]?.items?.[i];
+ if(!item)return;
+ fetchDemoMedia(-1,'trainmedia_'+i,'retryTrainDemo',i,item[0]);
+}
+
+async function fetchDemoMedia(libIdx,targetElementId,retryFnName='loadExerciseDemo',retryArg=libIdx,customExName=''){
+ const displayName=customExName||'Exercício';
+ const box=document.getElementById(targetElementId);if(!box)return;
+ const cacheKey=gifKeyForName(displayName);
+
+ const pinned=getPinnedGif(displayName);
+ if(pinned){
+  const existingOptions=demoCache[cacheKey]?.options||[];
+  const merged=[{url:pinned.url,backupUrl:pinned.backupUrl||pinned.url,name:displayName,apiLabel:pinned.apiLabel||displayName},...existingOptions.filter(o=>o.url!==pinned.url)];
+  demoCache[cacheKey]={options:merged,idx:0};
+  renderDemoIntoBox(box,demoCache[cacheKey],targetElementId,displayName);
+  return;
+ }
+
+ if(demoCache[cacheKey]?.options?.length){
+  renderDemoIntoBox(box,demoCache[cacheKey],targetElementId,displayName);
+  return;
+ }
+
+ box.innerHTML=`<div class="libmedia-state">Nenhum GIF salvo ainda para <b>${escapeAttr(displayName)}</b>.<br><span class="small">Busque na base abaixo e toque em <b>USAR E SALVAR</b> para vincular o GIF deste exercício.</span><br><button type="button" class="btn secondary" onclick="toggleGifPicker('${targetElementId}','${escapeAttr(displayName)}')">BUSCAR GIF NA BASE</button></div><div id="picker_${targetElementId}"></div>`;
+ toggleGifPicker(targetElementId,displayName);
+}
+
+function cycleDemoOption(targetElementId,displayName){
+ const cacheKey=gifKeyForName(displayName);
+ const entry=demoCache[cacheKey];
+ const box=document.getElementById(targetElementId);
+ if(!entry||!entry.options?.length||!box)return;
+ entry.idx=(entry.idx+1)%entry.options.length;
+ const current=entry.options[entry.idx];
+ setPinnedGif(displayName,current);
+ renderDemoIntoBox(box,entry,targetElementId,displayName);
+ notify('GIF atualizado para '+displayName+'!');
+}
+
+function renderDemoIntoBox(box,cacheEntry,targetElementId,displayName){
+ const demo=cacheEntry.options[cacheEntry.idx]||cacheEntry.options[0];
+ const total=cacheEntry.options.length;
+ const safeName=escapeAttr(displayName);
+ const fallback=demo.backupUrl&&demo.backupUrl!==demo.url?`this.onerror=null;this.src='${demo.backupUrl}'`:`this.parentElement.innerHTML='<div class=libmedia-state>Esta demonstração não carregou. Use <b>Trocar GIF na base</b> abaixo.</div>'`;
+ const switchBtn=total>1?`<button type="button" onclick="cycleDemoOption('${targetElementId}','${safeName}')">ALTERNAR (${cacheEntry.idx+1}/${total})</button>`:'';
+ const pickerBtn=`<button type="button" class="pinbtn" onclick="toggleGifPicker('${targetElementId}','${safeName}')">TROCAR GIF NA BASE</button>`;
+ box.innerHTML=`<img src="${demo.url}" alt="Demonstração: ${safeName}" loading="lazy" onerror="${fallback}"><div class="libmedia-caption"><span>${safeName}<span class="pinnedbadge">✓ GIF SALVO</span></span><div class="libmedia-nav">${switchBtn}${pickerBtn}</div></div><div id="picker_${targetElementId}"></div>`;
+}
+
+function toggleGifPicker(targetElementId,displayName){
+ const host=document.getElementById('picker_'+targetElementId);
+ if(!host)return;
+ if(host.innerHTML.trim()){host.innerHTML='';return}
+ const safeName=escapeAttr(displayName);
+ host.innerHTML=`<div class="gifpicker"><div class="small" style="margin-bottom:6px">Busque o movimento na base (ex.: <i>leg curl</i>, <i>squat</i>, <i>press</i>, <i>row</i>, <i>pulldown</i>) e toque para salvar:</div><div class="gifpicker-bar"><input id="pinput_${targetElementId}" placeholder="Digite para buscar (ex.: leg curl)..." onkeydown="if(event.key==='Enter')searchCatalogForPicker('${targetElementId}','${safeName}')"><button type="button" onclick="searchCatalogForPicker('${targetElementId}','${safeName}')">BUSCAR</button></div><div class="gifpicker-grid" id="pgrid_${targetElementId}"><div class="small" style="grid-column:1/-1;padding:8px">Digite um termo e clique em BUSCAR.</div></div></div>`;
+}
+
+async function searchCatalogForPicker(targetElementId,displayName){
+ const input=document.getElementById('pinput_'+targetElementId);
+ const grid=document.getElementById('pgrid_'+targetElementId);
+ if(!grid)return;
+ const q=(input?.value||'').trim();
+ if(!q){grid.innerHTML='<div class="small" style="grid-column:1/-1;padding:8px">Digite um termo para pesquisar.</div>';return}
+ grid.innerHTML='<div class="small" style="grid-column:1/-1;padding:8px">Buscando "'+escapeAttr(q)+'" na base...</div>';
+
+ if(!catalogState.items.length){
+  await loadMoreCatalogPages(3,50);
+ }
+ const words=normText(q).split(' ').filter(Boolean);
+ const uniqueMap=new Map();
+ for(const raw of catalogState.items){
+  const mapped=mapApiExercise(raw,displayName);
+  if(!mapped||uniqueMap.has(mapped.url))continue;
+  const hay=normText(mapped.apiLabel+' '+mapped.metaText);
+  if(words.every(w=>hay.includes(w)))uniqueMap.set(mapped.url,mapped);
+ }
+ const list=[...uniqueMap.values()].slice(0,16);
+ pickerResults[targetElementId]=list;
+
+ if(!list.length){
+  grid.innerHTML='<div class="small" style="grid-column:1/-1;padding:8px">Nenhum GIF encontrado para este termo. Tente palavras simples (ex.: <i>curl</i>, <i>squat</i>, <i>press</i>, <i>row</i>).</div>';
+  return;
+ }
+
+ const safeName=escapeAttr(displayName);
+ grid.innerHTML=list.map((item,idx)=>`<button type="button" class="gifchoice" onclick="selectCatalogGif('${targetElementId}','${safeName}',${idx})"><img src="${item.url}" alt="${escapeAttr(item.apiLabel)}" loading="lazy"><span>${escapeAttr(item.apiLabel)}</span><b>USAR E SALVAR</b></button>`).join('');
+}
+
+function selectCatalogGif(targetElementId,displayName,choiceIdx){
+ const list=pickerResults[targetElementId]||[];
+ const chosen=list[choiceIdx];
+ if(!chosen)return;
+ setPinnedGif(displayName,chosen);
+ const cacheKey=gifKeyForName(displayName);
+ const prev=demoCache[cacheKey]?.options||[];
+ demoCache[cacheKey]={options:[chosen,...prev.filter(o=>o.url!==chosen.url)],idx:0};
+ const box=document.getElementById(targetElementId);
+ if(box)renderDemoIntoBox(box,demoCache[cacheKey],targetElementId,displayName);
+ notify('GIF salvo para '+displayName+'!');
+}
+
+function escapeAttr(v){return String(v||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+
+function syncDayRestToggle(){
+ const chk=document.getElementById('dayRestToggle');
+ if(!chk)return;
+ chk.checked=Boolean(data.plans[currentDay]?.restDay);
+ document.querySelectorAll('.daybtn').forEach(b=>{
+  const d=b.dataset.day;
+  b.classList.toggle('restday-tab',Boolean(data.plans[d]?.restDay));
+ });
+}
+
+function toggleDayRest(isRest){
+ data.plans[currentDay].restDay=Boolean(isRest);
+ dismissFirstSetPrompt();
+ persist();
+ syncDayRestToggle();
+ renderExercises();
+ notify(isRest?`${data.plans[currentDay].name} marcado como dia de descanso.`:`${data.plans[currentDay].name} liberado para treino.`);
+}
+
+function selectDay(day){
+ const mapped=DAY_ALIASES[day]||day;
+ currentDay=DAY_ORDER.includes(mapped)?mapped:'segunda';
+ data.activeDay=currentDay;
+ editingIndex=null;
+ openDemoIndex=null;
+ dismissFirstSetPrompt();
+ document.getElementById('trainingTitle').textContent='Treino '+data.plans[currentDay].name;
+ document.querySelectorAll('.daybtn').forEach(b=>b.classList.toggle('active',b.dataset.day===currentDay));
+ syncDayRestToggle();
+ saveRawStore();
+ renderExercises();
+ if(document.getElementById('library')?.classList.contains('active'))renderLibrary();
+}
+
+function startEditExercise(i){editingIndex=editingIndex===i?null:i;if(editingIndex===i)openDemoIndex=null;renderExercises()}
+
+function saveEditedExercise(i){
+ const nameEl=document.getElementById(`editName_${i}`);
+ const muscleEl=document.getElementById(`editMuscle_${i}`);
+ const restEl=document.getElementById(`editRest_${i}`);
+ const newName=(nameEl?.value||'').trim();
+ const newMuscle=(muscleEl?.value||'').trim()||'Peito';
+ const rawRest=parseInt(restEl?.value,10);
+ const newRest=(!isNaN(rawRest)&&rawRest>=10&&rawRest<=600)?rawRest:null;
+ if(!newName){notify('Digite o nome do exercício.');return}
+ data.plans[currentDay].items[i]=[newName,newMuscle,newRest];
+ editingIndex=null;
+ persist();
+ renderExercises();
+ notify('Exercício e tempo de descanso salvos!');
+}
+
+function moveExercise(i,dir){const items=data.plans[currentDay].items;const target=i+dir;if(target<0||target>=items.length)return;[items[i],items[target]]=[items[target],items[i]];shiftDraftOnMove(currentDay,i,target);editingIndex=null;openDemoIndex=null;persist();renderExercises()}
+function removeExerciseFromPlan(i){const items=data.plans[currentDay].items;const removed=items[i]?.[0]||'Exercício';const totalBefore=items.length;if(!confirm(`Remover "${removed}" de ${data.plans[currentDay].name}?`))return;items.splice(i,1);shiftDraftOnRemove(currentDay,i,totalBefore);editingIndex=null;openDemoIndex=null;persist();renderExercises();notify('Exercício removido da ficha.')}
+
+function toggleAddExercise(forceState){
+ const box=document.getElementById('addExerciseBox');
+ if(!box)return;
+ const show=typeof forceState==='boolean'?forceState:box.style.display==='none';
+ box.style.display=show?'block':'none';
+ if(show){
+  document.getElementById('newExName').value='';
+  document.getElementById('newExRest').value='';
+  document.getElementById('newExName').focus();
+ }
+}
+
+function addExerciseToPlan(){
+ const name=(document.getElementById('newExName')?.value||'').trim();
+ const muscle=(document.getElementById('newExMuscle')?.value||'').trim()||'Peito';
+ const rawRest=parseInt(document.getElementById('newExRest')?.value,10);
+ const restSec=(!isNaN(rawRest)&&rawRest>=10&&rawRest<=600)?rawRest:null;
+ if(!name){notify('Informe o nome do exercício.');return}
+ data.plans[currentDay].restDay=false;
+ data.plans[currentDay].items.push([name,muscle,restSec]);
+ toggleAddExercise(false);
+ syncDayRestToggle();
+ persist();
+ renderExercises();
+ notify('Exercício adicionado a '+data.plans[currentDay].name+'.');
+}
+
+function resetCurrentPlan(){if(!confirm(`Limpar todos os exercícios de ${data.plans[currentDay].name}?`))return;data.plans[currentDay]={name:DEFAULT_PLANS[currentDay].name,restDay:false,items:[]};if(data.drafts)data.drafts[currentDay]={sets:{},updatedAt:0};editingIndex=null;openDemoIndex=null;syncDayRestToggle();persist();renderExercises();notify('Dia limpo.')}
+
+function beginWorkoutSession(){
+ const plan=data.plans[currentDay];
+ if(plan.restDay){notify(`${plan.name} está marcado como dia de descanso.`);return}
+ if(!plan.items.length){notify('Adicione pelo menos um exercício antes de iniciar o treino.');return}
+ const firstEx=plan.items[0]?.[0]||'Exercício';
+ pendingPromptExerciseIdx=0;
+ const box=document.getElementById('firstSetPrompt');
+ const title=document.getElementById('firstSetPromptTitle');
+ const sub=document.getElementById('firstSetPromptSub');
+ const restSec=getExerciseRestSeconds(plan.items[0]);
+ if(title)title.textContent=`Treino iniciado — você concluiu a 1ª série de "${firstEx}"?`;
+ if(sub)sub.textContent=`Se sim, iniciaremos ${fmt(restSec)} de descanso para a 2ª série.`;
+ if(box)box.classList.add('active');
+ notify(`${plan.name} iniciado!`);
+}
+
+function dismissFirstSetPrompt(){
+ pendingPromptExerciseIdx=null;
+ const box=document.getElementById('firstSetPrompt');
+ if(box)box.classList.remove('active');
+}
+
+function confirmFirstSetDone(completed){
+ const idx=typeof pendingPromptExerciseIdx==='number'?pendingPromptExerciseIdx:0;
+ dismissFirstSetPrompt();
+ if(!completed){
+  notify('Tudo bem! Marque a 1ª série quando concluir.');
+  return;
+ }
+ const chk=document.getElementById(`c${idx}_0`);
+ if(chk){
+  chk.checked=true;
+  captureSetInput(idx,0,'c',true);
+ }
+ startRestForExercise(idx,'Descanso para a 2ª série');
+}
+
+function lastFor(name){for(const w of data.workouts){const e=w.entries?.filter(x=>x.exercise===name&&x.weight&&x.reps);if(e?.length)return e.map(x=>`${x.weight}kg × ${x.reps}`).join(' / ')}return 'Sem registro anterior'}
+
+function renderExercises(){
+ syncDayRestToggle();
+ const n=Number(data.settings.sets)||2;
+ const plan=data.plans[currentDay];
+ const items=plan.items;
+ if(plan.restDay){
+  document.getElementById('trainingSetsPill').textContent='DIA DE DESCANSO';
+  document.getElementById('exerciseList').innerHTML=`<div class="restday"><b>${plan.name} — Dia de descanso</b>Este dia está marcado como descanso. Desmarque a opção acima ou adicione exercícios quando quiser treinar.</div>`;
+  updateDraftBanner();
+  return;
+ }
+ document.getElementById('trainingSetsPill').textContent=items.length?`${n} SÉRIES / EXERCÍCIO`:'DIA SEM EXERCÍCIOS';
+ if(!items.length){
+  document.getElementById('exerciseList').innerHTML=`<div class="restday"><b>Ficha vazia para ${plan.name}</b>Nenhuma ficha de demonstração foi pré-carregada. Clique em <b>+ ADICIONAR EXERCÍCIO</b> abaixo, importe uma ficha (.json) ou vá na aba <b>Exercícios</b> para escolher da API.</div>`;
+  updateDraftBanner();
+  return;
+ }
+ document.getElementById('exerciseList').innerHTML=items.map((e,i)=>{
+  const isEditing=editingIndex===i;
+  const isDemoOpen=openDemoIndex===i;
+  const hasPin=Boolean(getPinnedGif(e[0])?.url);
+  const exRest=getExerciseRestSeconds(e);
+  const muscleOpts=MUSCLE_OPTIONS.map(m=>`<option${m===e[1]?' selected':''}>${m}</option>`).join('');
+  const demoForm=isDemoOpen?renderTrainingDemoHtml(e[0],e[1],'trainmedia_'+i):'';
+  const editForm=isEditing?`<div class="exedit"><label class="field">Nome do exercício<input id="editName_${i}" value="${escapeAttr(e[0])}"></label><label class="field">Grupo muscular<select id="editMuscle_${i}">${muscleOpts}</select></label><label class="field">Descanso deste exercício (segundos)<input id="editRest_${i}" type="number" min="10" max="600" step="5" value="${exRest}"></label><div class="exedit-actions"><button class="btn" onclick="saveEditedExercise(${i})">SALVAR</button><button class="btn secondary" onclick="startEditExercise(${i})">CANCELAR</button></div></div>`:'';
+  return `<div class="exercise"><div class="exercisehead"><div><h3>${i+1}. ${e[0]}${hasPin?'<span class="pinnedbadge">GIF</span>':''}</h3><div class="muscles">${e[1]}</div><div class="exrest-badge">⏱ Descanso: ${exRest}s (${fmt(exRest)})</div></div><div class="exright"><span class="tag">${n} séries</span><button class="mini ${isDemoOpen?'active-demo':''}" onclick="toggleTrainingDemo(${i})">${isDemoOpen?'FECHAR':'COMO EXECUTAR'}</button><button class="mini" onclick="moveExercise(${i},-1)" title="Subir">↑</button><button class="mini" onclick="moveExercise(${i},1)" title="Descer">↓</button><button class="mini" onclick="startEditExercise(${i})">${isEditing?'FECHAR':'EDITAR'}</button><button class="mini dangerbtn" onclick="removeExerciseFromPlan(${i})" title="Remover">✕</button></div></div>${demoForm}${editForm}<div class="small" style="margin-top:7px">Último registro: ${lastFor(e[0])}</div>${Array.from({length:n},(_,j)=>`<div class="sets"><span>S${j+1}</span><input aria-label="Carga em kg" type="number" step="0.5" min="0" placeholder="kg" id="w${i}_${j}" oninput="captureSetInput(${i},${j},'w',this.value)"><input aria-label="Repetições" type="number" min="0" max="100" placeholder="reps" id="r${i}_${j}" oninput="captureSetInput(${i},${j},'r',this.value)"><input class="check" type="checkbox" aria-label="Série concluída" id="c${i}_${j}" onchange="captureSetInput(${i},${j},'c',this.checked);if(this.checked)startRestForExercise(${i},'Descanso após S${j+1}')"></div>`).join('')}</div>`;
+ }).join('');
+ restoreDayDraftInputs(currentDay);
+}
+
+function saveWorkout(){if(data.plans[currentDay].restDay){notify('Este dia está marcado como descanso.');return}if(!data.plans[currentDay].items.length){notify('Adicione pelo menos um exercício antes de registrar um treino.');return}let done=0,entries=[];const n=Number(data.settings.sets)||2;data.plans[currentDay].items.forEach((e,i)=>{for(let j=0;j<n;j++){const w=document.getElementById(`w${i}_${j}`).value,r=document.getElementById(`r${i}_${j}`).value,c=document.getElementById(`c${i}_${j}`).checked;if(w||r||c){entries.push({exercise:e[0],muscle:e[1],set:j+1,weight:w,reps:r,done:c})}if(c)done++}});if(!entries.length){notify('Registre pelo menos uma série antes de salvar.');return}data.workouts.unshift({date:new Date().toLocaleDateString('pt-BR'),timestamp:Date.now(),name:data.plans[currentDay].name,done,entries});if(data.drafts)data.drafts[currentDay]={sets:{},updatedAt:0};persist();renderExercises();notify(`${data.plans[currentDay].name} salvo (${data.name}): ${done} séries concluídas.`);}
+function saveWeight(){let v=parseFloat(document.getElementById('weightInput').value);if(!v||v<20||v>350){notify('Informe um peso válido.');return}data.weight=v;data.weights.unshift({date:new Date().toLocaleDateString('pt-BR'),timestamp:Date.now(),weight:v});persist();document.getElementById('weightInput').value='';notify('Peso registrado!')}
+function deleteWeight(idx){if(!confirm('Excluir este registro de peso?'))return;data.weights.splice(idx,1);data.weight=data.weights.length?data.weights[0].weight:null;persist();notify('Registro de peso removido.')}
+
+function renderProfileSwitcher(){
+ const sel=document.getElementById('profileSwitcher');
+ if(!sel)return;
+ sel.innerHTML=rootStore.profiles.map(p=>`<option value="${escapeAttr(p.id)}"${p.id===data.id?' selected':''}>${escapeAttr(p.name||p.profile?.name||'Atleta')}</option>`).join('');
+ const delBtn=document.getElementById('deleteProfileBtn');
+ if(delBtn)delBtn.disabled=rootStore.profiles.length<=1;
+ const badge=document.getElementById('headerUserName');
+ if(badge)badge.textContent=data.name||data.profile?.name||'Atleta';
+}
+function switchProfile(profileId){
+ const target=rootStore.profiles.find(p=>p.id===profileId);
+ if(!target)return;
+ data=target;
+ rootStore.activeProfileId=data.id;
+ resetTimer();
+ persist();
+ loadProfile();
+ selectDay(DAY_ORDER.includes(data.activeDay)?data.activeDay:'segunda');
+ notify('Perfil ativo: '+(data.name||'Atleta'));
+}
+function createNewProfile(){
+ const suggested='Atleta '+(rootStore.profiles.length+1);
+ const raw=prompt('Nome da nova pessoa/perfil:',suggested);
+ if(raw===null)return;
+ const name=raw.trim()||suggested;
+ const newProf=createProfileRecord(name);
+ rootStore.profiles.push(newProf);
+ switchProfile(newProf.id);
+ notify('Perfil "'+name+'" criado!');
+}
+function deleteCurrentProfile(){
+ if(rootStore.profiles.length<=1){notify('É necessário manter pelo menos 1 perfil.');return}
+ if(!confirm(`Excluir o perfil "${data.name}" e todos os seus treinos e pesos?`))return;
+ rootStore.profiles=rootStore.profiles.filter(p=>p.id!==data.id);
+ switchProfile(rootStore.profiles[0].id);
+ notify('Perfil removido.');
+}
+function saveProfile(){
+ const newName=(document.getElementById('userName').value||'').trim()||'Atleta';
+ const initW=parseFloat(document.getElementById('initialWeight').value);
+ data.name=newName;
+ data.profile={name:newName,goal:document.getElementById('goal').value,initialWeight:!isNaN(initW)&&initW>=20&&initW<=350?String(initW):''};
+ if(!isNaN(initW)&&initW>=20&&initW<=350&&!data.weights.length){
+  data.weight=initW;
+  data.weights.unshift({date:new Date().toLocaleDateString('pt-BR'),timestamp:Date.now(),weight:initW});
+ }
+ persist();
+ notify('Perfil salvo!');
+}
+function changeSetCount(){data.settings.sets=Number(document.getElementById('setCount').value);editingIndex=null;openDemoIndex=null;persist();renderExercises();notify('Número de séries atualizado.')}
+function changeRest(){data.settings.rest=Number(document.getElementById('restSetting').value);resetTimer();persist();renderExercises();notify('Descanso padrão atualizado.')}
+function fmt(s){const safe=Math.max(0,Math.floor(Number(s)||0));return String(Math.floor(safe/60)).padStart(2,'0')+':'+String(safe%60).padStart(2,'0')}
+function updateTimer(){
+ document.getElementById('timerDisplay').textContent=fmt(timerSeconds);
+ const ctx=document.getElementById('timerContext');
+ if(ctx)ctx.textContent=activeTimerContext;
+}
+function startTimerLoop(){
+ clearInterval(timerInterval);
+ document.getElementById('timerStart').textContent='PAUSAR';
+ updateTimer();
+ saveTimerState();
+ timerInterval=setInterval(()=>{
+  const left=timerEndTimestamp?Math.ceil((timerEndTimestamp-Date.now())/1000):(timerSeconds-1);
+  timerSeconds=Math.max(0,left);
+  updateTimer();
+  if(timerSeconds<=0){
+   clearInterval(timerInterval);
+   timerInterval=null;
+   timerEndTimestamp=null;
+   document.getElementById('timerStart').textContent='INICIAR';
+   activeTimerContext='Descanso concluído';
+   updateTimer();
+   saveTimerState();
+   notify('Descanso finalizado! Próxima série.');
+   if(navigator.vibrate)navigator.vibrate([180,100,180]);
+  }
+ },500);
+}
+function toggleTimer(){
+ if(timerInterval){
+  if(timerEndTimestamp)timerSeconds=Math.max(0,Math.ceil((timerEndTimestamp-Date.now())/1000));
+  clearInterval(timerInterval);
+  timerInterval=null;
+  timerEndTimestamp=null;
+  document.getElementById('timerStart').textContent='CONTINUAR';
+  updateTimer();
+  saveTimerState();
+  return;
+ }
+ if(timerSeconds<=0){timerSeconds=Number(data.settings.rest)||120;activeTimerContext='Descanso padrão'}
+ timerEndTimestamp=Date.now()+(timerSeconds*1000);
+ startTimerLoop();
+}
+function resetTimer(){
+ clearInterval(timerInterval);
+ timerInterval=null;
+ timerEndTimestamp=null;
+ timerSeconds=Number(data.settings.rest)||120;
+ activeTimerContext='Descanso padrão';
+ document.getElementById('timerStart').textContent='INICIAR';
+ updateTimer();
+ saveTimerState();
+}
+function startRestForExercise(exIdx,label='Descanso entre séries'){
+ clearInterval(timerInterval);
+ timerInterval=null;
+ timerEndTimestamp=null;
+ const item=data.plans[currentDay]?.items?.[exIdx];
+ timerSeconds=getExerciseRestSeconds(item);
+ activeTimerContext=`${item?.[0]||'Exercício'} • ${label}`;
+ timerEndTimestamp=Date.now()+(timerSeconds*1000);
+ startTimerLoop();
+}
+function startRest(){resetTimer();toggleTimer()}
+
+function updateHomeSubtitles(){
+ for(const k of DAY_ORDER){
+  const el=document.getElementById('homeSub_'+k);
+  if(!el)continue;
+  const plan=data.plans[k];
+  const items=plan?.items||[];
+  const pill=document.getElementById('homePill_'+k);
+  if(plan?.restDay){
+   el.textContent='Dia de descanso';
+   if(pill){pill.textContent='DESCANSO';pill.classList.add('restpill')}
+   continue;
+  }
+  const muscles=[...new Set(items.map(x=>x[1]).filter(Boolean))];
+  el.textContent=items.length?(muscles.slice(0,4).join(' • ')||'Exercícios configurados'):'Sem exercícios ainda (toque para adicionar)';
+  if(pill){
+   pill.textContent=items.length?k.toUpperCase().replace('TERCA','TERÇA'):'VAZIO';
+   pill.classList.toggle('restpill',!items.length);
+  }
+ }
+}
+function refresh(){
+ renderProfileSwitcher();
+ document.getElementById('totalWorkouts').textContent=data.workouts.length;
+ const hasWeight=typeof data.weight==='number'&&data.weight>0;
+ document.getElementById('homeWeight').textContent=hasWeight?Number(data.weight).toFixed(1).replace('.',','):'—';
+ document.getElementById('homeWeightUnit').textContent=hasWeight?' kg':'';
+ document.getElementById('progressWeight').textContent=hasWeight?Number(data.weight).toFixed(1).replace('.',',')+' kg':'Não informado';
+ updateHomeSubtitles();
+ document.getElementById('history').innerHTML=data.workouts.length?data.workouts.map((w,i)=>`<div class="historyitem"><div style="display:flex;justify-content:space-between;gap:8px"><b>${w.name}</b><button class="btn ghost" style="padding:5px 8px;font-size:10px" onclick="deleteWorkout(${i})">EXCLUIR</button></div><div class="small">${w.date} • ${w.done} séries concluídas • ${w.entries.length} registros</div>${w.entries.slice(0,5).map(e=>`<div class="small">${e.exercise}: ${e.weight||'—'} kg × ${e.reps||'—'} ${e.done?'✓':''}</div>`).join('')}</div>`).join(''):'<div class="empty">Seus treinos concluídos aparecerão aqui.</div>';
+ document.getElementById('weightHistory').innerHTML=data.weights?.length?data.weights.slice(0,12).map((w,idx)=>`<div class="weightrow"><span>${w.date}</span><span><b>${Number(w.weight).toFixed(1).replace('.',',')} kg</b> <button class="mini dangerbtn" style="margin-left:6px" onclick="deleteWeight(${idx})" title="Excluir">✕</button></span></div>`).join(''):'<div class="empty">Nenhum peso registrado ainda.</div>';
+}
+function deleteWorkout(i){if(!confirm('Excluir este registro de treino?'))return;data.workouts.splice(i,1);persist();notify('Treino excluído.') }
+
+/* Exportação e Importação Exclusiva de Fichas de Treino (.json) */
+function collectPlanPinnedGifs(plansObj){
+ const relevant={};
+ if(!rootStore.pinnedGifs||typeof rootStore.pinnedGifs!=='object')return relevant;
+ for(const day of DAY_ORDER){
+  const items=plansObj?.[day]?.items||[];
+  for(const item of items){
+   const k=gifKeyForName(item?.[0]);
+   if(k&&rootStore.pinnedGifs[k])relevant[k]=rootStore.pinnedGifs[k];
+  }
+ }
+ return relevant;
+}
+
+function exportPlanFile(){
+ const normalizedPlans=normalizePlansObject(data.plans);
+ const payload={
+  app:'EVOLVE',
+  type:'EVOLVE_WORKOUT_PLAN',
+  version:'1.9.6-gh',
+  exportedAt:new Date().toISOString(),
+  athleteName:data.name||'Atleta',
+  settings:{
+   sets:Number(data.settings?.sets)||2,
+   rest:Number(data.settings?.rest)||120
+  },
+  plans:normalizedPlans,
+  pinnedGifs:collectPlanPinnedGifs(normalizedPlans)
+ };
+ const safeAthlete=(data.name||'ficha').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'ficha';
+ const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+ const a=document.createElement('a');
+ a.href=URL.createObjectURL(blob);
+ a.download=`evolve-ficha-${safeAthlete}-${new Date().toISOString().slice(0,10)}.json`;
+ a.click();
+ URL.revokeObjectURL(a.href);
+ notify('Ficha exportada! Guarde o arquivo .json para backup ou outro perfil.');
+}
+
+function importPlanFile(ev){
+ const file=ev.target.files?.[0];
+ if(!file)return;
+ const reader=new FileReader();
+ reader.onload=()=>{
+  try{
+   const obj=JSON.parse(reader.result);
+   let rawPlans=null;
+   let incomingSettings=null;
+   let incomingGifs=null;
+
+   if(obj?.type==='EVOLVE_WORKOUT_PLAN'&&obj?.plans){
+    rawPlans=obj.plans;
+    incomingSettings=obj.settings||null;
+    incomingGifs=obj.pinnedGifs||null;
+   }else if(obj?.plans&&typeof obj.plans==='object'){
+    rawPlans=obj.plans;
+    incomingSettings=obj.settings||null;
+    incomingGifs=obj.pinnedGifs||null;
+   }else if(obj?.rootStore?.profiles?.[0]?.plans){
+    rawPlans=obj.rootStore.profiles[0].plans;
+    incomingSettings=obj.rootStore.profiles[0].settings||null;
+    incomingGifs=obj.rootStore.pinnedGifs||null;
+   }else{
+    throw new Error('Formato de ficha inválido');
+   }
+
+   const parsedPlans=normalizePlansObject(rawPlans);
+   const totalExercises=DAY_ORDER.reduce((acc,d)=>acc+(parsedPlans[d]?.items?.length||0),0);
+   if(!confirm(`Importar esta ficha (${totalExercises} exercícios na semana) para o perfil "${data.name}"?\n\nIsso substituirá os exercícios atuais deste perfil, mantendo seu histórico de treinos e peso.`)){
+    ev.target.value='';
+    return;
+   }
+
+   data.plans=parsedPlans;
+   data.planVersion=PLAN_VERSION;
+   data.drafts={};
+   if(incomingSettings){
+    if(incomingSettings.sets)data.settings.sets=Number(incomingSettings.sets)||2;
+    if(incomingSettings.rest)data.settings.rest=Number(incomingSettings.rest)||120;
+   }
+   if(incomingGifs&&typeof incomingGifs==='object'){
+    if(!rootStore.pinnedGifs)rootStore.pinnedGifs={};
+    Object.assign(rootStore.pinnedGifs,incomingGifs);
+   }
+   editingIndex=null;
+   openDemoIndex=null;
+   persist();
+   loadProfile();
+   selectDay(currentDay);
+   notify(`Ficha importada com sucesso para ${data.name}!`);
+  }catch(e){
+   notify('Arquivo de ficha inválido. Selecione um arquivo .json exportado pelo EVOLVE.');
+  }
+  ev.target.value='';
+ };
+ reader.readAsText(file);
+}
+
+function exportData(){const blob=new Blob([JSON.stringify({app:'EVOLVE',version:'1.9.6-gh',exportedAt:new Date().toISOString(),rootStore},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='evolve-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);notify('Backup completo exportado (perfis + fichas + histórico + GIFs).')}
+function importData(ev){const file=ev.target.files?.[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const obj=JSON.parse(reader.result);if(obj.rootStore&&Array.isArray(obj.rootStore.profiles)&&obj.rootStore.profiles.length){if(!confirm('Importar este backup completo e substituir os perfis atuais?'))return;rootStore=obj.rootStore;if(!rootStore.pinnedGifs||typeof rootStore.pinnedGifs!=='object')rootStore.pinnedGifs={};for(const p of rootStore.profiles){p.plans=normalizePlansObject(p.plans);p.weights=Array.isArray(p.weights)?p.weights:[];p.workouts=Array.isArray(p.workouts)?p.workouts:[];p.drafts=p.drafts&&typeof p.drafts==='object'?p.drafts:{};p.weight=p.weights.length?p.weights[0].weight:null}data=rootStore.profiles.find(p=>p.id===rootStore.activeProfileId)||rootStore.profiles[0];persist();loadProfile();selectDay(currentDay);renderLibrary();notify('Backup completo importado!');return}const incoming=obj.data||obj;if(!Array.isArray(incoming.workouts)||!incoming.settings)throw new Error('invalid');if(!confirm('Importar este backup para o perfil atual?'))return;data.workouts=incoming.workouts;data.weights=Array.isArray(incoming.weights)?incoming.weights:[];data.weight=data.weights.length?data.weights[0].weight:null;data.plans=normalizePlansObject(incoming.plans);persist();loadProfile();selectDay(currentDay);notify('Backup importado com sucesso.')}catch(e){notify('Arquivo de backup inválido.')}ev.target.value=''};reader.readAsText(file)}
+function clearData(){if(!confirm('Isso apagará todos os perfis, treinos, pesos e GIFs salvos deste dispositivo. Exporte um backup antes. Continuar?'))return;localStorage.removeItem('evolveData');localStorage.removeItem('evolveTimerState');location.reload()}
+function loadProfile(){document.getElementById('userName').value=data.name||data.profile.name||'Atleta';if(data.profile.goal)document.getElementById('goal').value=data.profile.goal;document.getElementById('initialWeight').value=data.profile.initialWeight||'';document.getElementById('setCount').value=data.settings.sets;document.getElementById('restSetting').value=data.settings.rest}
+
+/* Garante salvamento imediato ao sair do app, minimizar ou bloquear tela no celular */
+document.addEventListener('visibilitychange',()=>{
+ if(document.visibilityState==='hidden'){
+  saveRawStore();
+  saveTimerState();
+ }else if(document.visibilityState==='visible'){
+  restoreTimerState();
+ }
+});
+window.addEventListener('pagehide',()=>{saveRawStore();saveTimerState()});
+window.addEventListener('pageshow',()=>{restoreTimerState()});
+
+selectDay(currentDay);
+loadProfile();
+updateTimer();
+restoreTimerState();
+refresh();
+if(data.activePage&&['home','training','library','progress','profile'].includes(data.activePage)&&data.activePage!=='home'){
+ showPage(data.activePage,document.querySelector(`[data-page="${data.activePage}"]`));
+}
+renderLibrary();
+updateCatalogUiState();
+loadMoreCatalogPages(3,50);
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script></body></html>

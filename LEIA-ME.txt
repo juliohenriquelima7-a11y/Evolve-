@@ -1,0 +1,15 @@
+EVOLVE 1.9.6-GH — ATUALIZAÇÃO DE PERSISTÊNCIA E FICHAS (.JSON)
+
+O que foi adicionado com segurança sobre a base 1.9.5-gh:
+1. Salvamento automático em tempo real durante o treino:
+   - Cada peso (kg), repetição (reps) e checkbox de série concluída é gravado automaticamente no aparelho a cada digitação ou toque.
+   - A aba aberta, o dia da semana selecionado e o cronômetro de descanso (usando horário real de término) continuam funcionando mesmo se você sair para o WhatsApp/Instagram, minimizar o navegador ou bloquear a tela do celular.
+   - Os campos preenchidos só são limpos quando você clica em "FINALIZAR E SALVAR TREINO" (registrando no histórico) ou em "LIMPAR MARCAÇÕES".
+
+2. Exportar e Importar Ficha de Treino (.json):
+   - Botões "EXPORTAR FICHA (.JSON)" e "IMPORTAR FICHA (.JSON)" disponíveis tanto na aba Treinos quanto na aba Perfil.
+   - Permite salvar sua ficha semanal completa (exercícios, grupos musculares, descansos individuais e GIFs vinculados) em um arquivo leve para backup ou para importar em outro perfil/aparelho sem apagar o histórico de treinos e peso daquele perfil.
+
+COMO USAR / PUBLICAR
+1. Extraia o ZIP mantendo a pasta icons/ junto (se já tiver seus ícones PWA).
+2. Suba os arquivos atualizados no seu GitHub/Netlify ou abra o index.html.
